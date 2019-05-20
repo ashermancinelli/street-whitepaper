@@ -2,9 +2,9 @@ SRC := seminar.tex
 
 all:
 	pdflatex ${SRC}
-	# bibtex asexuality
-	# pdflatex asexuality.tex
-	# pdflatex asexuality.tex
+	bibtex references
+	pdflatex ${SRC}
+	pdflatex ${SRC}
 
 clean:
 	rm *.log
