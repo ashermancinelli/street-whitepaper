@@ -1,5 +1,7 @@
 SRC := seminar
 
+.PHONY: all clean
+
 all:
 	pdflatex ${SRC}.tex
 	bibtex ${SRC}
@@ -8,6 +10,8 @@ all:
 
 clean: all
 	rm *.log
-	rm *.out
 	rm *.aux
+	rm *.blg
+	rm *.bbl
+	rm *.bcs
 	clear
