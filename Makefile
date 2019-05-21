@@ -1,12 +1,12 @@
-SRC := seminar.tex
+SRC := seminar
 
 all:
-	pdflatex ${SRC}
-	bibtex references
+	pdflatex ${SRC}.tex
+	bibtex ${SRC}
 	pdflatex ${SRC}
 	pdflatex ${SRC}
 
-clean:
+clean: all
 	rm *.log
 	rm *.out
 	rm *.aux
