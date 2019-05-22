@@ -1,4 +1,4 @@
-SRC := seminar
+SRC := street
 
 .PHONY: all clean
 
@@ -13,5 +13,5 @@ clean: all
 	rm *.aux
 	rm *.blg
 	rm *.bbl
-	rm *.bcs
 	clear
+	ls
