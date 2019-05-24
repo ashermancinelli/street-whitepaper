@@ -3,6 +3,12 @@
     \epigraph{\textit{#1}}
 }
 
+\newcommand{\editonlyfn}[1]{
+    \ifdefined\isedit
+    \footnote{#1}
+    \fi
+}
+
 \def \qFirstCorTwelveTwentyEight {\epigraphIT{And God has appointed in the church first apostles, second prophets, third teachers, then miracles, then gifts of healing, helping, administrating, and various kinds of tongues.}{1 Corinthians 12:28}}
 
 \def \qJamesOneTwentySeven {\epigraphIT{Religion that is pure and undefiled before God the Father is this: to visit orphans and widows in their affliction, and to keep oneself unstained from the world.}{{James 1:27}}}
