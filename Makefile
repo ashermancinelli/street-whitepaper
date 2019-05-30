@@ -8,6 +8,9 @@ edit:
 	pdflatex "\def\isedit{1} \input{${SRC}.tex}"
 	pdflatex "\def\isedit{1} \input{${SRC}.tex}"
 
+report:
+	pdflatex "\input{report}"
+
 prod:
 	pdflatex ${SRC}
 	bibtex ${SRC}
