@@ -1,4 +1,4 @@
-arvix_src := arvix
+arxiv_src := arxiv
 vanilla_src := vanilla
 
 .PHONY: all clean edit print
@@ -15,21 +15,21 @@ vanilla-prod:
 	pdflatex ${vanilla_src}
 	pdflatex ${vanilla_src}
 
-arvix-edit:
-	pdflatex "\def\isedit{1} \input{${arvix_src}.tex}"
-	bibtex ${arvix_src}
-	pdflatex "\def\isedit{1} \input{${arvix_src}.tex}"
-	pdflatex "\def\isedit{1} \input{${arvix_src}.tex}"
+arxiv-edit:
+	pdflatex "\def\isedit{1} \input{${arxiv_src}.tex}"
+	bibtex ${arxiv_src}
+	pdflatex "\def\isedit{1} \input{${arxiv_src}.tex}"
+	pdflatex "\def\isedit{1} \input{${arxiv_src}.tex}"
 
-arvix-prod:
-	pdflatex ${arvix_src}
-	bibtex ${arvix_src}
-	pdflatex ${arvix_src}
-	pdflatex ${arvix_src}
+arxiv-prod:
+	pdflatex ${arxiv_src}
+	bibtex ${arxiv_src}
+	pdflatex ${arxiv_src}
+	pdflatex ${arxiv_src}
 
-edit: vanilla-edit arvix-edit
+edit: vanilla-edit arxiv-edit
 
-prod: vanilla-prod arvix-prod
+prod: vanilla-prod arxiv-prod
 
 all: prod clean
 
@@ -38,4 +38,5 @@ clean:
 	rm *.aux
 	rm *.blg
 	rm *.bbl
+	clear
 	ls
