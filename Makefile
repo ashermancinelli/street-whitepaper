@@ -1,4 +1,4 @@
-arvix_src := street
+arvix_src := arvix
 vanilla_src := vanilla
 
 .PHONY: all clean edit print
@@ -31,10 +31,11 @@ edit: vanilla-edit arvix-edit
 
 prod: vanilla-prod arvix-prod
 
-all: edit prod clean
+all: prod clean
 
 clean:
 	rm *.log
 	rm *.aux
 	rm *.blg
 	rm *.bbl
+	ls
