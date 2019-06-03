@@ -1,5 +1,6 @@
 arxiv_src := arxiv
 vanilla_src := vanilla
+handout_src := handout
 
 .PHONY: all clean edit print
 
@@ -31,7 +32,10 @@ edit: vanilla-edit arxiv-edit
 
 prod: vanilla-prod arxiv-prod
 
-all: prod clean
+handout:
+	pdflatex ${handout_src}
+
+all: prod handout clean 
 
 clean:
 	rm *.log

@@ -1,44 +1,17 @@
 
-%Preamble
-    \documentclass[12pt]{article}
-    \usepackage{setspace}
-    \usepackage{arxiv}
-    \usepackage{epigraph}
-    \usepackage{cite}
-    \setlength{\parindent}{4em}
-    \setlength{\parskip}{1em}
-    \linespread{1}
+\documentclass[12pt]{article}
+\usepackage{arvix}
+\usepackage{setspace}
+\usepackage{epigraph}
+\usepackage{cite}
 
-    \input{utils/quotes}
-
-    \title{Street Ministry \\
-        \large Equipping the Church \\
-        \ifdefined\isedit
-        \large DRAFT
-        \fi}
-
-    \author{Asher Mancinelli \\
-        Indian Trail Church \\
-        Spokane, WA 99218 \\
-        \texttt{asher.mancinelli@pnnl.gov} \\ }
-%/Preamble
-
-% WB: maybe better motivate service through scripture
-% invite others into the ministry is good
-% how specifically do I plan to move the gospel forward through this
-% not remove people from poverty, though that is a goal, but to alleviate eternal suffering
-% how do we do this as the church?
-
-% CC:
-% galatians 2:10 -> importance of meeting physical needs how to do this in a way that's
-% condusive to a long term solution
-% 
-
-% We need the church as a section here; we need to narrow the scope of this as well
-% 
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\input{sections/preamble}
 
 \begin{document}
 \maketitle
+\includegraphics{itc-no-bg.png}
 
 \input{sections/abstract}
 \input{utils/keywords}
@@ -50,6 +23,7 @@
 \input{sections/implementation}
 \input{sections/concludingNotes}
 \clearpage
+
 \bibliography{references}{}
 \bibliographystyle{unsrt}
 
